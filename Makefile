@@ -1,10 +1,11 @@
 .cc.o:
 	g++ -std=c++20 -c $< -O
-itf:	itf.o reduce.o
+itf:	itf.o 
 	g++ $^ -o $@
 clean:
 	@rm itf *.o
 deploy:
+	@sudo systemctl stop itf || true
 	@sudo cp itf /usr/sbin
 	@sudo cp itf.service /etc/systemd/system
 	@sudo systemctl enable itf

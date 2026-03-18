@@ -1,6 +1,6 @@
 [Unit]
 Description=ITF
 [Service]
-ExecStart=/usr/sbin/itf
+ExecStart=/usr/sbin/itf -q
 [Install]
 WantedBy=multi-user.target
