@@ -58,7 +58,7 @@ int main(int argc, char** argv) {
         }
         if (A == 1 && B == 3 && C == 9) {
             apply(TRUTH);
-            apply(POSITION);
+            apply(TRUTH);
             apply(POSITION);
             A = B = C = 0;
             ++hits;
